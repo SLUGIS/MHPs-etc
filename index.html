@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="dist/MarkerCluster.css" />
 	<link rel="stylesheet" href="dist/MarkerCluster.Default.css" />
 	<script src="dist/leaflet.markercluster-src.js"></script>
+	<script type="text/javascript" src="dist/leaflet-hash.js"></script>
 	<script src="cents.geojson"></script>
 </head>
 <body>
@@ -26,7 +27,8 @@
 		    }
 		}
 
-		var map = L.map('map').setView([35.3, -120.7], 9);
+		var map = L.map('map').setView([35.38, -120.67], 10);
+		var hash = new L.Hash(map);
 
 		L.tileLayer('https://{s}.tiles.mapbox.com/v4/{mapId}/{z}/{x}/{y}.png?access_token={token}', {
     		attribution: '<a href="https://www.mapbox.com/about/maps/" target="_blank">&copy; Mapbox &copy; OpenStreetMap</a>',
